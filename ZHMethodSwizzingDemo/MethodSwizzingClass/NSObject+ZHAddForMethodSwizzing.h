@@ -34,4 +34,15 @@
  */
 + (BOOL)zh_swizzleMetaClass:(Class) class original:(SEL)originalSelector withSwizzedClass:(Class)swizzedClass swizzledSelector:(SEL)swizzledSelector;
 
+/**
+ *  替换类的方法
+ *
+ *  @param originalSelector 需要被替换的函数
+ *  @param swizzedClass     替换使用的类
+ *  @param swizzledSelector 替换时使用的函数
+ *
+ *  @return 替换是否成功
+ */
++ (BOOL)zh_swizzleSelector:(SEL)originalSelector withSwizzedClass:(Class)swizzedClass swizzledSelector:(SEL)swizzledSelector;
+
 @end

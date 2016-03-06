@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC17AE601C8BC168001A1154 /* NSObject+ZHAddForMethodSwizzing.m in Sources */ = {isa = PBXBuildFile; fileRef = FC17AE5F1C8BC168001A1154 /* NSObject+ZHAddForMethodSwizzing.m */; };
 		FC92D6C61C20333B0092B7B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC92D6C51C20333B0092B7B7 /* main.m */; };
 		FC92D6C91C20333B0092B7B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC92D6C81C20333B0092B7B7 /* AppDelegate.m */; };
 		FC92D6CC1C20333B0092B7B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC92D6CB1C20333B0092B7B7 /* ViewController.m */; };
@@ -15,7 +16,6 @@
 		FC92D6D41C20333B0092B7B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC92D6D21C20333B0092B7B7 /* LaunchScreen.storyboard */; };
 		FC92D6E11C2034DB0092B7B7 /* ZHClassACondition1.m in Sources */ = {isa = PBXBuildFile; fileRef = FC92D6E01C2034DB0092B7B7 /* ZHClassACondition1.m */; };
 		FC92D6E41C2034F00092B7B7 /* ZHClassBCondition1.m in Sources */ = {isa = PBXBuildFile; fileRef = FC92D6E31C2034F00092B7B7 /* ZHClassBCondition1.m */; };
-		FC92D6E71C20356E0092B7B7 /* NSObject+ZHAddForMethodSwizzing.m in Sources */ = {isa = PBXBuildFile; fileRef = FC92D6E61C20356E0092B7B7 /* NSObject+ZHAddForMethodSwizzing.m */; };
 		FC92D6EA1C20388C0092B7B7 /* ZHClassACondition2.m in Sources */ = {isa = PBXBuildFile; fileRef = FC92D6E91C20388C0092B7B7 /* ZHClassACondition2.m */; };
 		FC92D6ED1C20389F0092B7B7 /* ZHClassBCondition2.m in Sources */ = {isa = PBXBuildFile; fileRef = FC92D6EC1C20389F0092B7B7 /* ZHClassBCondition2.m */; };
 		FC92D6F01C2039740092B7B7 /* ZHClassACondition3.m in Sources */ = {isa = PBXBuildFile; fileRef = FC92D6EF1C2039740092B7B7 /* ZHClassACondition3.m */; };
@@ -31,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC17AE5E1C8BC168001A1154 /* NSObject+ZHAddForMethodSwizzing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZHAddForMethodSwizzing.h"; sourceTree = "<group>"; };
+		FC17AE5F1C8BC168001A1154 /* NSObject+ZHAddForMethodSwizzing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ZHAddForMethodSwizzing.m"; sourceTree = "<group>"; };
 		FC92D6C11C20333B0092B7B7 /* ZHMethodSwizzingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZHMethodSwizzingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC92D6C51C20333B0092B7B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC92D6C71C20333B0092B7B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -45,8 +47,6 @@
 		FC92D6E01C2034DB0092B7B7 /* ZHClassACondition1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHClassACondition1.m; sourceTree = "<group>"; };
 		FC92D6E21C2034F00092B7B7 /* ZHClassBCondition1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHClassBCondition1.h; sourceTree = "<group>"; };
 		FC92D6E31C2034F00092B7B7 /* ZHClassBCondition1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHClassBCondition1.m; sourceTree = "<group>"; };
-		FC92D6E51C20356E0092B7B7 /* NSObject+ZHAddForMethodSwizzing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZHAddForMethodSwizzing.h"; sourceTree = "<group>"; };
-		FC92D6E61C20356E0092B7B7 /* NSObject+ZHAddForMethodSwizzing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ZHAddForMethodSwizzing.m"; sourceTree = "<group>"; };
 		FC92D6E81C20388C0092B7B7 /* ZHClassACondition2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHClassACondition2.h; sourceTree = "<group>"; };
 		FC92D6E91C20388C0092B7B7 /* ZHClassACondition2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHClassACondition2.m; sourceTree = "<group>"; };
 		FC92D6EB1C20389F0092B7B7 /* ZHClassBCondition2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHClassBCondition2.h; sourceTree = "<group>"; };
@@ -84,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC17AE5D1C8BC168001A1154 /* MethodSwizzingClass */ = {
+			isa = PBXGroup;
+			children = (
+				FC17AE5E1C8BC168001A1154 /* NSObject+ZHAddForMethodSwizzing.h */,
+				FC17AE5F1C8BC168001A1154 /* NSObject+ZHAddForMethodSwizzing.m */,
+			);
+			path = MethodSwizzingClass;
+			sourceTree = "<group>";
+		};
 		FC92D6B81C20333B0092B7B7 = {
 			isa = PBXGroup;
 			children = (
@@ -128,8 +137,7 @@
 		FC92D6DB1C20337D0092B7B7 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				FC92D6E51C20356E0092B7B7 /* NSObject+ZHAddForMethodSwizzing.h */,
-				FC92D6E61C20356E0092B7B7 /* NSObject+ZHAddForMethodSwizzing.m */,
+				FC17AE5D1C8BC168001A1154 /* MethodSwizzingClass */,
 				FC92D6DF1C2034DB0092B7B7 /* ZHClassACondition1.h */,
 				FC92D6E01C2034DB0092B7B7 /* ZHClassACondition1.m */,
 				FC92D6E21C2034F00092B7B7 /* ZHClassBCondition1.h */,
@@ -249,8 +257,8 @@
 				FC92D6C61C20333B0092B7B7 /* main.m in Sources */,
 				FC92D7081C20403F0092B7B7 /* ZHClassACondition7.m in Sources */,
 				FC92D6FF1C203C5A0092B7B7 /* ZHClassBCondition5.m in Sources */,
-				FC92D6E71C20356E0092B7B7 /* NSObject+ZHAddForMethodSwizzing.m in Sources */,
 				FC92D6F31C2039830092B7B7 /* ZHClassBCondition3.m in Sources */,
+				FC17AE601C8BC168001A1154 /* NSObject+ZHAddForMethodSwizzing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +407,7 @@
 				FC92D6DA1C20333B0092B7B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

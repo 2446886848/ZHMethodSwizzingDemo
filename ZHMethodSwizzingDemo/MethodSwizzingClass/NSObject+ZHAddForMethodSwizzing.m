@@ -31,6 +31,17 @@
         return NO;
     }
     
+    if (originalMethod) {
+        //比较Selector的TypeEncoding
+        NSString *oriTypeEcodeing = [NSString stringWithCString:method_getTypeEncoding(originalMethod) encoding:NSUTF8StringEncoding];
+        NSString *swizzedTypeEcodeing = [NSString stringWithCString:method_getTypeEncoding(swizzledMethod) encoding:NSUTF8StringEncoding];
+        
+        if (![oriTypeEcodeing isEqualToString:swizzedTypeEcodeing]) {
+            NSLog(@"Trying to swizze methods with different typeEncodeing");
+            return NO;
+        }
+    }
+    
     BOOL didAddMethod =
     class_addMethod(class,
                     originalSelector,
@@ -43,17 +54,9 @@
                             swizzledSelector,
                             method_getImplementation(originalMethod),
                             method_getTypeEncoding(originalMethod));
-    } else  //originalSelector 存在
+    }
+    else  //originalSelector 存在
     {
-        //判断typeEncoding是否一样
-        NSString *oriTypeEcodeing = [NSString stringWithCString:method_getTypeEncoding(originalMethod) encoding:NSUTF8StringEncoding];
-        NSString *swizzedTypeEcodeing = [NSString stringWithCString:method_getTypeEncoding(swizzledMethod) encoding:NSUTF8StringEncoding];
-        
-        if (![oriTypeEcodeing isEqualToString:swizzedTypeEcodeing]) {
-            NSLog(@"Trying to swizze methods with different typeEncodeing");
-            return NO;
-        }
-        
         //为类添加新的实例方法
         BOOL didAddSwizzedMethod =
         class_addMethod(class,
@@ -88,6 +91,20 @@
 + (BOOL)zh_swizzleMetaClass:(Class) class original:(SEL)originalSelector withSwizzedClass:(Class)swizzedClass swizzledSelector:(SEL)swizzledSelector
 {
     return [self zh_swizzleClass:objc_getMetaClass(class_getName(class)) original:originalSelector withSwizzedClass:objc_getMetaClass(class_getName(swizzedClass)) swizzledSelector:swizzledSelector];
+}
+
+/**
+ *  替换类的方法
+ *
+ *  @param originalSelector 需要被替换的函数
+ *  @param swizzedClass     替换使用的类
+ *  @param swizzledSelector 替换时使用的函数
+ *
+ *  @return 替换是否成功
+ */
++ (BOOL)zh_swizzleSelector:(SEL)originalSelector withSwizzedClass:(Class)swizzedClass swizzledSelector:(SEL)swizzledSelector
+{
+    return [self zh_swizzleClass:[self class] original:originalSelector withSwizzedClass:swizzedClass swizzledSelector:swizzledSelector];
 }
 
 @end
